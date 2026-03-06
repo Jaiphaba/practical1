@@ -1,103 +1,124 @@
+<!DOCTYPE html>
 <html>
-    <head>
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-         <script src="js/script.js"></script>
-    </head>
-    <style>
-        .form-group-row div {
-            margin-top:20px;
-        } 
-        #bank_details {
-            text-decoration:underline;
-            width:200px;
-        }
-        .bank_group div {
-            margin-top:20px;
-        }
-    </style>
-    <body> 
-      <div class="container">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form id="form"> 
-                    <div class="form-group-row">
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="text" class="form-control" id="full_name" placeholder="Enter Full Name" 
-                            name="name"/>  
+
+                <form id="form">
+
+                    <div class="row">
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Enter your name" name="name" required>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="text" class="form-control" placeholder="Enter Father Name" 
-                            name="father_name"/>  
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Enter your father name" name="father" required>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="text" class="form-control" placeholder="Enter Aadhaar Number" 
-                            name="aadhaar_number"/>  
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Enter Aadhaar " name="aadhaar_number" maxlength="12" required>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="email" class="form-control" placeholder="Enter Email" 
-                            name="email"/>  
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="email" class="form-control" placeholder="Enter Email" name="email" required="@">
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="password" class="form-control" placeholder="Enter Password" 
-                            name="password"/>  
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="password" class="form-control" placeholder="Enter password" name="password" minlength="6" required>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <select class="form-control" name="qualification">
-                                <option value="">Please select options</option>
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <select class="form-control" name="education">
+                                <option value="">Select an option</option>
                                 <option value="10th">10th</option>
                                 <option value="12th">12th</option>
                                 <option value="Graduate">Graduate</option>
-                                <option value="Master">Master</option>
+                                <option value="Masters">Masters</option>
+                                <option value="PHD">PHD</option>
                             </select>
                         </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4"> 
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
                             <select class="form-control" name="gender">
-                                <option value="">Please select gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option> 
+                                <option value="">Gender</option>
+                                <option value="MALE">MALE</option>
+                                <option value="FEMALE">FEMALE</option>
                             </select>
                         </div>
-                         <div class="col-sm-4 col-md-6 col-lg-4"> 
-                            <input type="date" class="form-control" placeholder="Enter date of birth" 
-                            name="date_of_birth"/>  
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="date" class="form-control" name="dob">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Bank details information</h2>
                         </div>
                     </div>
-                    <div style="position:relative;top:30px;left:20px;color:black;font-weight:600;">
-                            <p id="bank_details">Bank Details Information</p>
+
+                    <div class="row">
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Account holder name" name="account_name" required>
+                        </div>
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Bank name" name="bank_name" required>
+                        </div>
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="Account number" name="account_number" maxlength="12" required>
+                        </div>
+
+                        <div class="col-sm-4 col-md-6 col-lg-4 form-group">
+                            <input type="text" class="form-control" placeholder="IFSC code" name="ifsc" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-primary submit-btn" value="Submit">
+                        </div>
+
                     </div>
-                    <div class="form-group-row">                        
-                        <div class="col-sm-4 col-md-6 col-lg-4" class="bank_group"> 
-                            <input type="text" class="form-control" placeholder="Bank Name" 
-                            name="bank_name"/>  
-                        </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4" class="bank_group"> 
-                            <input type="text" class="form-control" placeholder="Enter account holder name" 
-                            name="account_holder_name"/>  
-                        </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4" class="bank_group"> 
-                            <input type="number" class="form-control" placeholder="Enter account number" 
-                            name="account_number"/>  
-                        </div>
-                        <div class="col-sm-4 col-md-6 col-lg-4" class="bank_group"> 
-                            <input type="submit" class="primary btn btn-primary" class="form-control" value="Submit">  
-                        </div>
-                    </div>
+
                 </form>
+
             </div>
         </div>
-      </div>
-      <script> 
-            document.getElementById("form").addEventListener("submit", function(e) {
+    </div>
+
+
+    <script>
+
+        document.getElementById("form").addEventListener("submit", function (e) {
+
             e.preventDefault();
 
             const formData = new FormData(this);
 
             const data = {
                 name: formData.get("name"),
-                father_name: formData.get("father_name"),
+                father_name: formData.get("father"),
                 aadhaar_number: formData.get("aadhaar_number"),
                 email: formData.get("email"),
-                password: formData.get("password")
+                password: formData.get("password"),
+                education: formData.get("education"),
+                gender: formData.get("gender"),
+                dob: formData.get("dob"),
+                account_name: formData.get("account_name"),
+                bank_name: formData.get("bank_name"),
+                account_number: formData.get("account_number"),
+                ifsc: formData.get("ifsc")
             };
 
             fetch("https://nsedm.nielitkohima.in/api/mca_practical_form.php", {
@@ -107,37 +128,43 @@
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.json())
-            .then(result => {
-                console.log("Success:", result);
-                alert("Data submitted successfully");
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
+                .then(res => res.json())
+                .then(result => {
+                    console.log("success:", result);
+                    alert("data submitted successfully")
+                });
+
         });
-        </script>
-    </body>
+
+    </script>
+
+
+    <style>
+
+        .form-group {
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.35s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #208136;
+            transform: scale(1.12) translateY(-3px);
+            box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.35);
+        }
+
+    </style>
+
+</body>
+
 </html>
-
-
-
-<!---
-<div class="col-sm-4 col-md-6 col-lg-4 mb-3 text-center">
-    <img src="images/photo1.jpg" 
-         class="img-fluid img-thumbnail" 
-         alt="Passport Photo">
-    <p class="mt-2">Passport Photo</p>
-</div> */ /* img-fluid -	Makes image responsive (auto resize)
-w-100	Takes full width of column
-rounded	Rounded corners
-img-thumbnail	Adds border & padding
-mb-3	Adds spacing below image
-
- <form action="" method="get">
-            <input type="text" placeholder="Enter Your Name" name="full_name" maxlength="10"/>
-            <input type="text" placeholder="Enter Father's Name" name="father_name"/>
-            <input type="email" placeholder="Enter Email" name="email"/>
-            <input type="password" placeholder="Enter Password" name="password"/>
-            <input type="submit" value="Submit"/>
-        </form>-->
